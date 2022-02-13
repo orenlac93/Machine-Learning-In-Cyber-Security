@@ -6,7 +6,22 @@
 <br />
 <br />
 
-### requiremets
+### Description
+
+Lack of data is the most common yet fixable machine learning issue. <br />
+In this project the purpose was not only to develop Machine Learning system for detecting malicious urls <br />
+but also to deal with a standard unbalanced URL dataset and try to improve the model results by creating additional data: <br />
+
+
+1. generate pattern of Malicious URL by using 'DGA' algorithm
+2. scraping URL data from the internet
+3. language generation with 'Transformers' (generate new urls by using deep learning methods)
+
+
+<br />
+<br />
+
+### Requiremets
 
 1. Python 3 <br />
 2. pandas <br />
@@ -30,8 +45,8 @@ go to 'Malicious URL Detection' folder  <br /> <br />
 ### Train A Model (Basic Model/Mixed Data Model)
 <br />
 
-#### Basic Model (based on the 'url_data.scv' dataset) and 'url_cassification.ipynb' notebook
-1. run the 'url_cassification.ipynb' file <br /> 
+#### Basic Model (based on the 'url_data.scv' dataset) and 'url_classification.ipynb' notebook
+1. run the 'url_classification.ipynb' file <br /> 
 
 
 <br /> 
