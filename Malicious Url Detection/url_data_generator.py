@@ -3,6 +3,10 @@ import os
 from urllib.parse import urlunsplit, urlencode
 import random
 import pandas as pd
+from datetime import date
+from hashlib import sha256
+!pip install Random-Word
+
 
 # crate a custom url by choosing: protocol(http/https), domain(abc...), path(/home/...), ending(.com/.net ...)
 def build_url(protocol, domain, path, ending):
@@ -39,6 +43,55 @@ def dga_by_date(year: int, month: int, day: int) -> str:
 
     return domain + ".com"
 
+#SHA-256 is a patented cryptographic hash function that outputs a value that is 256 bits long
+#we can use it to create a string that looks malicous
+def dga_by_date_and_sha256(num,date_str=None):
+    if date_str == None:
+        date_str = '{0.year}-{0.month}-{0.day}'.format(date.today())
+    tlds = ['.com','.co.uk','.org','.fr','.co.il']
+    hash = sha256('{0}{1}'.format(date_str, num).encode('utf-8')).hexdigest()[3:20]
+    replace_char = chr(0xff & ((num % 26) + 97))
+    
+    return '{0}{1}{2:433}'.format(replace_char,hash,tlds[num % len(tlds)])
+
+#doms = ['www.' + dga_make(i) for i in range(5)]
+
+
+
+#but real DGA's arent so obvious, this url will easly will be classified as malicious.
+#lets insert real words to try to make the ML job a bit harder.
+#but random words are hard for us to predict.
+r = RandomWords()
+random_word = r.get_random_word(includePartOfSpeech="noun")
+def dga_by_date_and_sha256_and_words(num,date_str=None):
+    if date_str == None:
+        date_str = '{0.year}-{0.month}-{0.day}'.format(date.today())
+    tlds = ['.com','.co.uk','.org','.fr','.co.il']
+    hash = sha256('{0}{1}'.format(date_str, num).encode('utf-8')).hexdigest()[3:20]
+    replace_char = chr(0xff & ((num % 26) + 97))
+    
+    return '{0}{1}{2:433}'.format(replace_char,random_word+hash,tlds[num % len(tlds)])
+
+#doms = ['www.' + dga_by_date_and_sha256_and_words(i) for i in range(5)]
+
+#we can use words that are accociated with computers
+import random
+random_words = ['download','file','firewall','web','server','microservice','compiler','internet','winrar','winzip','linux']
+random_word = random_words[random.randint(0, len(random_words))]
+def dga_by_date_and_sha256_and_words(num,date_str=None):
+    if date_str == None:
+        date_str = '{0.year}-{0.month}-{0.day}'.format(date.today())
+    tlds = ['.com','.co.uk','.org','.fr','.co.il']
+    hash = sha256('{0}{1}'.format(date_str, num).encode('utf-8')).hexdigest()[3:20]
+    replace_char = chr(0xff & ((num % 26) + 97))
+    
+    return '{0}{1}{2:433}'.format(replace_char,hash,tlds[num % len(tlds)])
+
+#doms = ['www.' + random_word + dga_by_date_and_sha256_and_words(i) for i in range(50)]
+
+url_data_frame = pd.DataFrame(doms, columns=['url'])
+url_data_frame.drop_duplicates(subset=["url"], keep=False, inplace=True)
+to_csv = url_data_frame.to_csv("data/dga_data.csv", index=False)
 
 # create lists to store the urls and the labels
 url_list = []
@@ -80,4 +133,4 @@ X.drop_duplicates(subset=["url", "label"], keep=False, inplace=True)
 print(X)
 
 # write the new data set to csv file
-to_csv = X.to_csv("data/dga_data.csv", index=False)
+#to_csv = X.to_csv("data/dga_data.csv", index=False)
