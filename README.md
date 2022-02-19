@@ -17,6 +17,12 @@ but also to deal with a standard unbalanced URL dataset and try to improve the m
 2. scraping URL data from the internet
 3. language generation with 'Transformers' (generate new urls by using deep learning methods)
 
+<br />
+<img width="712" alt="2022-02-19 (2)" src="https://user-images.githubusercontent.com/57047863/154808352-27642fa1-a0c5-4521-822e-6a1ae6e9dbfe.png">
+<br />
+<img width="474" alt="2022-02-19 (1)" src="https://user-images.githubusercontent.com/57047863/154808366-cb17080b-cec6-4a42-bec0-38e1a8da78b0.png">
+<br />
+
 
 <br />
 <br />
