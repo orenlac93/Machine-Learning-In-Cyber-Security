@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import pandas as pd
 
-# setup chrome driver
+# setup chrome driver (important to download the specific version of the browser version)
 PATH = "C:/Program Files (x86)/chromedriver.exe"
 driver = webdriver.Chrome(PATH)
 
@@ -39,6 +39,6 @@ headers = ["url", "label"]
 X = pd.concat(X, axis=1, keys=headers)
 
 # write the new data set to csv file
-to_csv = X.to_csv("data/scraping_data.csv", index=False)
+to_csv = X.to_csv("data/url_data_scraping.csv", index=False)
 
 driver.quit()

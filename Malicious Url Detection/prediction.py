@@ -5,7 +5,7 @@ import preprocessing
 url = [input("Enter your URL: ")]
 
 # read the URL Classification model
-with open('models/url_model.pkl', 'rb') as f:
+with open('models/randomForest_model.pkl', 'rb') as f:
     clf = pickle.load(f)
 
 # load the model prediction for the given URL (the URL is preprocessed)

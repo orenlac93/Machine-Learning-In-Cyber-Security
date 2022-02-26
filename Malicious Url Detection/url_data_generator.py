@@ -102,4 +102,4 @@ X.drop_duplicates(subset=["url", "label"], keep=False, inplace=True)
 print(X)
 
 # write the new data set to csv file
-to_csv = X.to_csv("data/dga_data.csv", index=False)
+to_csv = X.to_csv("data/url_data_dga.csv", index=False)
