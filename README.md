@@ -57,6 +57,15 @@ but also to deal with a standard unbalanced URL dataset and try to improve the m
 <br />
 <br />
 
+#### machine learning architecture
+
+<br />
+
+<img width="481" alt="1" src="https://user-images.githubusercontent.com/57047863/156202137-d345ffb1-82d7-492d-b9ea-f18c8d3e63aa.png">
+
+<br />
+<br />
+
 ### How to use
 go to 'Malicious URL Detection' folder  <br /> <br />
 
