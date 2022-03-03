@@ -15,24 +15,31 @@ but also to deal with a standard unbalanced URL dataset and try to improve the m
 <br />
 
 
-1. generate pattern of Malicious URL by using 'DGA' algorithm
+#### 1. generate pattern of Malicious URL by using 'DGA' algorithm
 
 <br />
 <img width="764" alt="2022-02-19 (7)" src="https://user-images.githubusercontent.com/57047863/154812551-bb277bd5-6e4f-45d8-b3e2-52e95eff52ed.png">
 <br />
+<br />
 
-2. scraping URL data from the internet
+#### 2. scraping URL data from the internet
 
 <br />
 <img width="868" alt="2022-02-19 (5)" src="https://user-images.githubusercontent.com/57047863/154812256-a5e451a8-1c8d-427e-8aaf-2f34da69a774.png">
 <br />
+<br />
 
-3. language generation with 'Transformers' (generate new urls by using deep learning methods)
+#### 3. language generation with 'Transformers' (generate new urls using Transformers)
 
 <br />
 <img width="712" alt="2022-02-19 (2)" src="https://user-images.githubusercontent.com/57047863/154808352-27642fa1-a0c5-4521-822e-6a1ae6e9dbfe.png">
 <br />
 <img width="474" alt="2022-02-19 (1)" src="https://user-images.githubusercontent.com/57047863/154808366-cb17080b-cec6-4a42-bec0-38e1a8da78b0.png">
+<br />
+
+<img width="468" alt="2022-03-02 (5)" src="https://user-images.githubusercontent.com/57047863/156618074-04e1b96c-d6dc-47fb-a045-411a6853915b.png">
+<br />
+<img width="383" alt="2022-03-02 (6)" src="https://user-images.githubusercontent.com/57047863/156618228-d942f0d5-4f29-4ae7-9234-bbc6ed7149c4.png">
 <br />
 
 
@@ -87,14 +94,25 @@ go to 'Malicious URL Detection' folder  <br /> <br />
  
 ### Use The Model
 
-1. run the 'prediction.py' file <br /> <br />
+1. run the 'prediction.py' file <br /> 
+2. insert URL for prediction <br />
 
 <br />
 <br />
 
-<img width="590" alt="2022-02-10" src="https://user-images.githubusercontent.com/57047863/153758121-b667c4e9-46c3-4041-a11c-a4bb89441128.png">
+<img width="876" alt="2022-03-02" src="https://user-images.githubusercontent.com/57047863/156618977-e52d00cf-cc4f-485a-a4fe-98b91a9e064d.png">
 
 <br />
 <br />
 
-<img width="608" alt="2022-02-10 (1)" src="https://user-images.githubusercontent.com/57047863/153758139-7ab41c1c-931f-41da-b384-675b4ec0695c.png">
+<img width="875" alt="2022-03-02 (1)" src="https://user-images.githubusercontent.com/57047863/156619122-2bf03f4d-16bf-4d37-b7ca-e1550bde0013.png">
+
+<br />
+<br />
+
+<img width="887" alt="2022-03-02 (2)" src="https://user-images.githubusercontent.com/57047863/156619334-a7d1f6d5-8698-4ff6-8742-5e81a9cd6fb9.png">
+
+<br />
+<br />
+
+<img width="862" alt="2022-03-02 (3)" src="https://user-images.githubusercontent.com/57047863/156619458-e58c7f44-a5ff-4eee-a836-c43136fb3ff9.png">
